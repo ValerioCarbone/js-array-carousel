@@ -9,11 +9,30 @@
 const imagesCarousel = ['./img/01.webp', './img/02.webp', './img/03.webp', './img/04.webp', './img/05.webp']
 
 let containerDOMElement = document.querySelector('.container')
-let imgDOMElement = document.createElement('img')
-console.log(imagesCarousel.length)
 
-for (let i = 0; i <= imagesCarousel.length; i++){
-    
-    imgDOMElement.outerHTML = (`<img src=${imagesCarousel[i - 1]} alt="">`) 
-    containerDOMElement.append(imgDOMElement)
+
+for (let i = 0; i <= imagesCarousel.length - 1; i++) {
+
+    const currentImg = imagesCarousel[i]
+    const htmlImgString = ` 
+    <div class = 'hidden'>
+        <img src=${currentImg}>
+    </div>
+    `
+    containerDOMElement.innerHTML += htmlImgString
+
 }
+
+const imgDOMElements = document.getElementsByClassName('hidden')
+console.log(imgDOMElements)
+
+let imgDisplayDOMElement = imgDOMElements[1]
+console.log(imgDisplayDOMElement)
+
+imgDisplayDOMElement.classList.replace('hidden', 'display')
+
+// const imgDOMElements = document.getElementsByClassName('hidden')
+
+// const imgDisplayDOMElement = imgDOMElements[0]
+
+// imgDisplayDOMElement.classList.add('display')

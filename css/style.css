@@ -8,13 +8,16 @@
 
 img{
     width: 100%;
-    /* display: none; */
 }
 
 /* UTILITIES */
 
 .display{
     display:block;
+}
+
+.hidden{
+    display: none;
 }
 
 
