@@ -8,8 +8,15 @@
 
 img{
     width: 100%;
-    display: block;
+    /* display: none; */
 }
+
+/* UTILITIES */
+
+.display{
+    display:block;
+}
+
 
 /* MAIN */
 
