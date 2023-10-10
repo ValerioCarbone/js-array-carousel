@@ -10,25 +10,55 @@ img{
     width: 100%;
 }
 
-/* UTILITIES */
-
-.display{
-    display:block;
+button{
+    border: none;
 }
+
+/* UTILITIES */
 
 .hidden{
     display: none;
+}
+
+.display{
+    display:block;
 }
 
 
 /* MAIN */
 
 .container{
-    width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     height: 100vh;
-    align-items: center;
 }
 
+.box{
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.arrowhead-selector{
+    font-size: 65px;
+    background-color: rgba(162, 166, 164, 0.556);
+    color: black;
+    aspect-ratio: 1;
+    width: 60px;
+    display: flex;
+    border-radius: 999px;
+    justify-content: center;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#arrow-up{
+    top: 10%;
+    align-items: start;
+}
+
+#arrow-down{
+    align-items: end;
+    bottom: 10%;
+}

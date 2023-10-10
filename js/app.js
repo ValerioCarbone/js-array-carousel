@@ -8,7 +8,7 @@
 
 const imagesCarousel = ['./img/01.webp', './img/02.webp', './img/03.webp', './img/04.webp', './img/05.webp']
 
-let containerDOMElement = document.querySelector('.container')
+let boxDOMElement = document.querySelector('.box')
 
 
 for (let i = 0; i <= imagesCarousel.length - 1; i++) {
@@ -19,20 +19,77 @@ for (let i = 0; i <= imagesCarousel.length - 1; i++) {
         <img src=${currentImg}>
     </div>
     `
-    containerDOMElement.innerHTML += htmlImgString
+    boxDOMElement.innerHTML += htmlImgString
 
 }
 
 const imgDOMElements = document.getElementsByClassName('hidden')
-console.log(imgDOMElements)
 
-let imgDisplayDOMElement = imgDOMElements[1]
-console.log(imgDisplayDOMElement)
-
-imgDisplayDOMElement.classList.replace('hidden', 'display')
-
-// const imgDOMElements = document.getElementsByClassName('hidden')
-
-// const imgDisplayDOMElement = imgDOMElements[0]
-
+// let number = 0
+// let imgDisplayDOMElement = imgDOMElements[number]
 // imgDisplayDOMElement.classList.add('display')
+
+// const imgUpDOMElement = document.getElementById('arrow-up')
+// console.log(imgUpDOMElement) 
+
+// // imgUpDOMElement.addEventListener('click', function() {
+
+// //     number += 1
+// //     if (number > 3){
+// //         number = 0
+// //     }
+// //     let imgDisplayDOMElement = imgDOMElements[number]
+
+// //     imgDisplayDOMElement.classList.add('display')
+// // }
+// // )
+
+// imgUpDOMElement.addEventListener('click', function() {
+
+//     imgDisplayDOMElement.classList.remove('display')
+
+//     number += 1
+//     if (number > 3){
+//     number = 0
+//     }
+
+//     imgDisplayDOMElement.classList.add('display')
+// }
+// )
+
+// const imgDownDOMElement = document.getElementById('arrow-down')
+
+// imgDownDOMElement.addEventListener('click', function() {
+
+//     imgDisplayDOMElement.classList.replace('display', 'hidden')
+
+//     number -= 1
+//     if (number < 0){
+//     number = 3
+//     }
+
+//     imgDisplayDOMElement.classList.replace('hidden', 'display')
+// }
+// )
+
+
+
+
+
+
+
+
+
+// // imgDownDOMElement.addEventListener('click', function(){
+
+// //     number -= 1
+// //     if (number < 0){
+// //         number = 3
+// //     }
+// //     console.log(imgDOMElements[number])
+// //     let imgDisplayDOMElement = imgDOMElements[number]
+
+// //     imgDisplayDOMElement.classList.add('display')
+// // }
+// // )
+
