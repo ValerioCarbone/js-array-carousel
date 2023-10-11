@@ -58,6 +58,10 @@ const imgUpDOMElement = document.getElementById('arrow-up')
 
 imgUpDOMElement.addEventListener('click', function() {
 
+    thumbnailsDisplayDOMElement.classList.replace('active', 'not-active')
+    
+    imgDisplayDOMElement.classList.replace('display', 'hidden')
+    
     currentIndex += 1
     if (currentIndex > 4){
         currentIndex = 0
@@ -76,7 +80,10 @@ const imgDownDOMElement = document.getElementById('arrow-down')
 
 imgDownDOMElement.addEventListener('click', function() {
 
-    
+    thumbnailsDisplayDOMElement.classList.replace('active', 'not-active')
+
+    imgDisplayDOMElement.classList.replace('display', 'hidden')
+
     currentIndex -= 1
     if (currentIndex < 0){
         currentIndex = 4
