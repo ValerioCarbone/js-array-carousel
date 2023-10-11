@@ -11,7 +11,7 @@ const imagesCarousel = ['./img/01.webp', './img/02.webp', './img/03.webp', './im
 let boxDOMElement = document.querySelector('.box')
 
 
-for (let i = 0; i <= imagesCarousel.length - 1; i++) {
+for (let i = 0; i < imagesCarousel.length; i++) {
 
     const currentImg = imagesCarousel[i]
     const htmlImgString = ` 
@@ -25,24 +25,40 @@ for (let i = 0; i <= imagesCarousel.length - 1; i++) {
 
 const imgDOMElements = document.getElementsByClassName('hidden')
 
-// let number = 0
-// let imgDisplayDOMElement = imgDOMElements[number]
-// imgDisplayDOMElement.classList.add('display')
+let number = 0
 
-// const imgUpDOMElement = document.getElementById('arrow-up')
-// console.log(imgUpDOMElement) 
+let imgDisplayDOMElement = imgDOMElements[number]
 
-// // imgUpDOMElement.addEventListener('click', function() {
+imgDisplayDOMElement.classList.replace('hidden', 'display')
 
-// //     number += 1
-// //     if (number > 3){
-// //         number = 0
-// //     }
-// //     let imgDisplayDOMElement = imgDOMElements[number]
+const imgUpDOMElement = document.getElementById('arrow-up')
 
-// //     imgDisplayDOMElement.classList.add('display')
-// // }
-// // )
+imgUpDOMElement.addEventListener('click', function() {
+
+    imgDisplayDOMElement.classList.replace('display', 'hidden')
+    number += 1
+    if (number > 3){
+        number = 0
+    }
+    imgDisplayDOMElement = imgDOMElements[number]
+    imgDisplayDOMElement.classList.replace('hidden', 'display')
+}
+)
+
+const imgDownDOMElement = document.getElementById('arrow-down')
+
+imgDownDOMElement.addEventListener('click', function() {
+
+    imgDisplayDOMElement.classList.replace('display', 'hidden')
+    number -= 1
+    if (number < 0){
+        number = 4
+    }
+    imgDisplayDOMElement = imgDOMElements[number]
+    imgDisplayDOMElement.classList.replace('hidden', 'display')
+}
+)
+
 
 // imgUpDOMElement.addEventListener('click', function() {
 
@@ -71,14 +87,6 @@ const imgDOMElements = document.getElementsByClassName('hidden')
 //     imgDisplayDOMElement.classList.replace('hidden', 'display')
 // }
 // )
-
-
-
-
-
-
-
-
 
 // // imgDownDOMElement.addEventListener('click', function(){
 
