@@ -99,5 +99,3 @@ imgDownDOMElement.addEventListener('click', function () {
     thumbnailsDisplayDOMElement.classList.replace('not-active', 'active')
 }
 )
-
-
