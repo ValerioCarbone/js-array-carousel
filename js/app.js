@@ -53,7 +53,7 @@ thumbnailsDisplayDOMElement.classList.replace('not-active', 'active')
 // Ad ogni click cambiare l'elemento che ha la classe display e active 
 
 
-const imgUpDOMElement = document.getElementById('arrow-up')
+const imgUpDOMElement = document.querySelector('.arrow-up')
 
 imgUpDOMElement.addEventListener('click', function () {
 
@@ -76,7 +76,7 @@ imgUpDOMElement.addEventListener('click', function () {
 }
 )
 
-const imgDownDOMElement = document.getElementById('arrow-down')
+const imgDownDOMElement = document.querySelector('.arrow-down')
 
 imgDownDOMElement.addEventListener('click', function () {
 
