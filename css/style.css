@@ -6,8 +6,17 @@
     box-sizing: border-box;
 }
 
-img{
+.box img{
     width: 100%;
+    height: 1000px;
+    object-fit: fill;
+}
+
+.thumbnails img{
+    width: 400px;
+    height: 200px;
+    object-fit: fill;
+    display: block;
 }
 
 button{
@@ -22,20 +31,32 @@ button{
 
 .display{
     display:block;
+    width: 100%;
 }
 
 
 /* MAIN */
 
 .container{
-    width: 100%;
-    height: 100vh;
+    width: 1800px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 400px;
+    justify-content: center;
+    
 }
 
 .box{
-    max-width: 1400px;
-    margin: 0 auto;
     position: relative;
+    display: flex;
+    flex-grow: 1;
+    
+}
+
+.thumbnails{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .arrowhead-selector{
@@ -55,10 +76,19 @@ button{
 
 #arrow-up{
     top: 10%;
-    align-items: start;
 }
 
 #arrow-down{
     align-items: end;
-    bottom: 10%;
+    bottom: 5%;
+}
+
+.not-active{
+    filter: brightness(0.4)
+}   
+    
+
+.active{
+    border: 2px solid greenyellow;
+    filter: brightness(1);
 }
