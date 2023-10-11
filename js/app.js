@@ -11,11 +11,10 @@ let boxDOMElement = document.querySelector('.box')
 
 let thumbnailsDOMElement = document.querySelector('.thumbnails')
 
-let currentImg 
 
 for (let i = 0; i < imagesCarousel.length; i++) {
 
-    currentImg = imagesCarousel[i]
+    let currentImg = imagesCarousel[i]
     const htmlImgString = ` 
     <div class = 'hidden'>
         <img src=${currentImg}>
@@ -39,11 +38,11 @@ const thumbnailsDOMElements = document.getElementsByClassName('not-active')
 
 // Dare la classe display e active all'elemento che voglio sia visibile e contornato
 
-let number = 0
+let currentIndex = 0
 
-let imgDisplayDOMElement = imgDOMElements[number]
+let imgDisplayDOMElement = imgDOMElements[currentIndex]
 
-let thumbnailsDisplayDOMElement = thumbnailsDOMElements[number]
+let thumbnailsDisplayDOMElement = thumbnailsDOMElements[currentIndex]
 
 imgDisplayDOMElement.classList.replace('hidden', 'display')
 
@@ -63,13 +62,13 @@ imgUpDOMElement.addEventListener('click', function() {
     
     imgDisplayDOMElement.classList.replace('display', 'hidden')
     
-    number += 1
-    if (number > 4){
-        number = 0
+    currentIndex += 1
+    if (currentIndex > 4){
+        currentIndex = 0
     }
-    imgDisplayDOMElement = imgDOMElements[number]
+    imgDisplayDOMElement = imgDOMElements[currentIndex]
 
-    thumbnailsDisplayDOMElement = thumbnailsDOMElements[number]
+    thumbnailsDisplayDOMElement = thumbnailsDOMElements[currentIndex]
     
     imgDisplayDOMElement.classList.replace('hidden', 'display')
 
@@ -85,13 +84,13 @@ imgDownDOMElement.addEventListener('click', function() {
 
     imgDisplayDOMElement.classList.replace('display', 'hidden')
     
-    number -= 1
-    if (number < 0){
-        number = 4
+    currentIndex -= 1
+    if (currentIndex < 0){
+        currentIndex = 4
     }
-    imgDisplayDOMElement = imgDOMElements[number]
+    imgDisplayDOMElement = imgDOMElements[currentIndex]
     
-    thumbnailsDisplayDOMElement = thumbnailsDOMElements[number]
+    thumbnailsDisplayDOMElement = thumbnailsDOMElements[currentIndex]
 
     imgDisplayDOMElement.classList.replace('hidden', 'display')
 
