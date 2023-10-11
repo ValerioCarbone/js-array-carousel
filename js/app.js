@@ -11,7 +11,6 @@ let boxDOMElement = document.querySelector('.box')
 
 let thumbnailsDOMElement = document.querySelector('.thumbnails')
 
-
 for (let i = 0; i < imagesCarousel.length; i++) {
 
     let currentImg = imagesCarousel[i]
