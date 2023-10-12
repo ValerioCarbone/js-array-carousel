@@ -63,7 +63,7 @@ imgUpDOMElement.addEventListener('click', function () {
 
     currentIndex -= 1
     if (currentIndex < 0) {
-        currentIndex = 4
+        currentIndex = imagesCarousel.length - 1
     }
 
     imgDisplayDOMElement = imgDOMElements[currentIndex]
