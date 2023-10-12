@@ -85,7 +85,7 @@ imgDownDOMElement.addEventListener('click', function () {
     imgDisplayDOMElement.classList.replace('display', 'hidden')
 
     currentIndex += 1
-    if (currentIndex > 4) {
+    if (currentIndex > imagesCarousel.length - 1) {
         currentIndex = 0
     }
 
